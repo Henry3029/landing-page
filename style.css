@@ -1,0 +1,396 @@
+* {
+	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+	font-family: "Roboto", Sans-Serif;
+	display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;/* **important:** prevent horizontal scrollbar on body*/
+  width: 100vw; /*ensure body takes exactly viewport width*/
+}
+
+ul {
+	list-style: none; /*remove default list style */
+}
+
+a {
+	text-decoration: none; 
+	color: inherit; /*inherit color from parent*/
+}
+
+button {
+	background-color: #3882f6;
+	color: white;
+	padding: 8px 15px;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+	font-weight: bold;
+}
+/*----section 1: Header----*/
+.header {
+	background-color: #1f2937;
+	color: white;
+	display: flex;/*make header a flex container*/
+	flex-wrap: wrap;/*allow header content to wrap if it is too wide*/
+	justify-content: space-between;/*push logo to the left,  and links to the right*/
+	align-items: center;/*vertically centers items*/
+	padding: 15px 10px;/*slightly reduce default padding, for very small screen*/
+	gap: 10px; /*space between logo and links if needed for smaller screen*/
+}
+
+.header-logo {
+	font-size: 15px; 
+	font-weight: bold;
+	color: #f9faf8;
+	flex-shrink: 0;/*prevent logo from shrinking too much*/
+}
+
+.header-links {
+	display: flex;/*makes the list of links a flex container*/
+	flex-wrap: wrap; /*allow links to wrap if it is too wide*/
+	gap: 10px; 
+	font-size: 18px;
+	color: #3882f6;
+}
+/*----section 2: hero/showcase----*/
+.hero {
+	background-color: #1f2937;/*same dark background as header*/
+	color: white;
+	display: flex;/* make hero a flex container*/
+	justify-content: center;
+	align-items: center;
+	padding: 40px 10px;/*slightly reduce default padding for very small screen*/
+	text-align: center;/*center text when stacked*/
+	gap: 20px; /*space between text and images*/
+}
+
+.hero-text-content {
+	flex: 1;/*allow text to grow*/
+	max-width: 90%;/*ensure it doesn't try to be wider than its container*/
+}
+
+.hero-text-content h1 {
+	font-size: 2.2em;/*responsive font-size (em/rem)*/
+	font-weight: 900;/*extra bold*/
+	color: #ffd700;
+	margin-bottom: 8px; 
+	line-height: 1.2;/*improve readability*/
+	word-wrap: break-word;/*New: force long words to break*/
+	overflow-wrap: break-word;/*modern equivalent*/
+}
+
+.hero-text-content p {
+	font-size: 1em/*responsive font-size*/
+	color: #dddddd;/*lighter color, lower contrast*/
+	margin-bottom: 20px;
+	line-height: 1.5;/*improve readability*/
+}
+
+.hero-image-placeholder {
+	background-color: #6c7a89;
+	color: #ddd; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 90%; /*responsive width*/
+	max-width: 350px/*limit how big it can get even at 90%*/
+	height: 180px; /*fixed height */
+	text-align: center;
+	padding: 10px;/*internal padding for text*/
+}
+
+/*----section 3: information-section---*/
+.info-section {
+	background-color: white;
+	padding: 50px 10px;/*smaller default padding*/
+	text-align: center;/*center the heading*/
+}
+
+.info-section h2 {
+	font-size: 2em;
+	color: #222222;
+	font-weight: 900;
+	margin-bottom: 30px; 
+}
+
+.info-cards {
+	display: flex;/*make card a flex container*/
+	flex-direction: column;/*stack cards vertically by default for mobile*/
+	align-items: center;/*center them horizontally*/
+	gap: 30px;/*space between cards*/
+}
+
+.card {
+	width: 90%; /*cards take up width on mobile*/
+	max-width: 280px; /*limit there max-width for readability*/
+	display: flex;
+	flex-direction: column;/*stack image and text vertically*/
+	align-items: center;/*center content horizontally within cards*/
+	text-align: center;/*center text*/
+}
+
+img {
+	width: 100%;/*make image fill the card width*/
+	height: 200px;/*fixed height for all image*/
+	object-fit: cover;/*crop the image nicely without distortion*/
+	border: 4px solid #3882f6;
+	border-radius: 15px; 
+	margin-bottom: 10px; 
+	flex-shrink: 0;/*prevent it from shrinking too much */
+}
+
+.card p {
+	font-size: 0.95em; /*responsive font size*/
+	color: #555555;
+	padding: 0 5px;/*small internal padding for cards text*/
+}
+/*----section 4: quote section----*/
+.quotes {
+	background-color: #e5e7eb;
+	padding: 50px 15px; /*small default padding*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;/*center content block*/
+	justify-content: center;/*center contents, if height allows*/
+	text-align: center;
+}
+
+.quote-text {
+	font-size: 1.5em;/*responsive font-size*/
+	font-style: italic;
+	font-weight: 300;/*lighter weight for quote*/
+	color: #1f2937;/*dark text*/
+	margin-bottom: 10px;
+	max-width: 95%;/*new slightly tighter max-width for mobile*/
+	line-height: 1.4;
+	word-wrap: break-word;/*ensure long quote break*/
+	overflow-wrap: break-word;
+	/*text-align: center; centered for mobile*/
+}
+
+.quote-author {
+	font-size: 1em;/*responsive font-size*/
+	font-weight: bold;
+	color: #1f2937;
+	margin-top: 10px; /*add some space above author*/
+}
+/*----section 5: call to action (bottom)---*/
+.call-to-action {
+	background-color: #3882f6;
+	margin: 50px 15px;/*smaller default margin*/
+	padding: 30px 15px;/*smaller default padding */
+	border-radius: 10px;/*rounded corners*/
+	display: flex;
+	flex-direction: column;/*stack text and button vertically for mobile*/
+	justify-content: center;
+	align-items: center;/*center content*/
+	color: white;
+	gap: 20px; /*space between text and button*/
+	text-align: center;
+}
+
+.cta-heading {
+	font-size: 1.3em;/*responsive font-size*/
+	font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.cta-subtext {
+	font-size: 0.95em;
+	color: #e5e7eb;/*slightly lighter subtext*/
+}
+.cta-button {
+	border: 2px solid white;/*white border for this button*/
+	flex-shrink: 0;/*prevent button from shrinking*/
+}
+
+/*----section 6: footer-----*/
+.footer {
+	background-color: #1f2937;/*same dark background as header/hero*/
+	color: #e5e7eb;
+	padding: 20px 10px; 
+	text-align: center;
+	font-size: 0.9em;
+	margin-top: auto; /*pushes the footer to the bottom if content is short*/
+}
+
+/*---media queries for lager screens,  (tablet and desktop) */
+/*tablet breakpoint -adjust from stacked to side-by-side for some elements*/
+@media (min-width: 768px) {
+	.header {
+		padding: 15px 50px;/*more padding for tablet*/
+		flex-wrap: nowrap;/*prevent wrapping on header in larger screen*/
+	}
+	
+	.header-logo {
+		font-size: 24px;
+	}
+	
+	.header-links {
+		gap: 20px; 
+		font-size: 18px;
+		flex-wrap: nowrap;/*prevent wrapping in links on larger screen*/
+	}
+	
+	.hero {
+		flex-direction: row;/*go back to the side-by-side*/
+		text-align: left;/*Align text left*/
+		padding: 80px 50px;/*more padding*/
+		gap: 40px; 
+	}
+	
+	.hero-text-content h1 {
+		font-size: 40px;
+	}
+	
+	.hero-text-content p {
+		font-size: 18px;
+	}
+	
+	.hero-image-placeholder {
+		width: 400px; 
+		height: 220px;
+	}
+	
+	.info-section {
+		padding: 70px 50px;
+	}
+	
+	.info-section h2 {
+		font-size: 32px;
+		margin-bottom: 40px;
+	}
+	
+	.info-cards {
+		flex-direction: row;/*go back to horizontal*/
+		flex-wrap: wrap;/*keep wrapping for cards*/
+		justify-content: center;
+		gap: 30px; 
+	}
+	
+	.card {
+		width: 180px; 
+	}
+	
+	.quotes {
+		padding: 80px 100px;
+		align-items: flex-end;/*align author to the right*/
+	}
+	
+	.quote-text {
+		font-size: 28px;
+		max-width: 800px;
+		text-align: left;/*back to left align for desktop*/
+	}
+	
+	.quote-author {
+		font-size: 18px;
+		align-self: flex-end;/*align to the right of the quote section*/
+		padding: 0;
+	}
+	
+	.call-to-action {
+		margin: 80px 50px;
+		padding: 40px 60px;
+		flex-direction: row;/*side-by-side again*/
+		text-align: left;
+	}
+	
+	.cta-heading {
+		font-size: 22px;
+	}
+	
+	.cta-subtext {
+		font-size: 17px;
+	}
+	
+ .footer {
+ 	padding: 25px;
+ 	font-size: 15px;
+ }
+}
+
+/*Desktop breakpoint*/
+@media (min-width: 1024px) {
+	.header {
+		padding: 15px 150px;
+	}
+	
+	.hero {
+		padding: 100px 150px;
+		gap: 50px; 
+	}
+	
+	.hero-text-content h1 {
+		font-size: 48px;
+	}
+	
+	.hero-text-content p {
+		font-size: 18px;
+	}
+	
+	.hero-image-placeholder {
+		width: 500px;
+		height: 250px;
+	}
+	
+	.info-section {
+		padding: 50px 150px 100px;
+	}
+	
+	.info-section h2 {
+		font-size: 36px;
+		margin-bottom: 50px;
+	}
+	
+	.info-cards {
+		gap: 40px; 
+	}
+	
+	.card {
+		width: 170px; 
+	}
+	
+	img {
+		width: 160px; 
+		height: 160px;
+	}
+	
+	.quotes {
+		padding: 100px 250px;
+	}
+	
+	.quote-text {
+		font-size: 36px;
+	}
+	
+	.quote-author {
+		font-size: 20px;
+	}
+	
+	.call-to-action {
+		margin: 100px 150px;
+		padding: 40px 100px;
+		gap: 30px; 
+	}
+	
+	.cta-heading {
+		font-size: 24px;
+	}
+	
+	.cta-subtext {
+		font-size: 18px;
+	}
+	
+	.footer {
+		padding: 30px;
+		font-size: 16px;
+	}
+	
+}
+
