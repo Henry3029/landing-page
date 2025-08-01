@@ -183,11 +183,22 @@ img {
 	/*text-align: center; centered for mobile*/
 }
 
+.quote {
+	border-bottom: 1px solid blue;
+	padding-bottom: 10px;/*space above the line*/
+	margin-bottom: 15px;/*space after the line*/
+}
+
+.quote:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+
 .quote-author {
 	font-size: 1em;/*responsive font-size*/
 	font-weight: bold;
-	color: #1f2937;
-	margin-top: 10px; /*add some space above author*/
+	color: #3b82f6;
+	margin-top: 2px; /*add some space above author*/
 }
 /*----section 5: call to action (bottom)---*/
 .call-to-action {
