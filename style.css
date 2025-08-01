@@ -57,6 +57,16 @@ button {
 	font-size: 18px;
 	color: #3882f6;
 }
+
+.header-links li {
+	border-right: 1px solid;
+	padding: 5px 10px;
+	background-color: #f9f9f9;
+}
+
+.header-links li:last-child {
+	border-right: none;
+}
 /*----section 2: hero/showcase----*/
 .hero {
 	background-color: #1f2937;/*same dark background as header*/
