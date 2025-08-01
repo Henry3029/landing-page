@@ -4,7 +4,7 @@ This is a simple landing page created as part of [The Odin Project](https://www.
 It demonstrates basic HTML and CSS skills, including the use of Flexbox for layout.
 
 ## 🚀 Live Demo
-[View the landing page](https://yourusername.github.io/landing-page/)
+[View the landing page](https://github.com/Henry3029/Landing-page)
 
 ## 📌 Features
 - Clean and responsive layout
