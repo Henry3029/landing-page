@@ -91,17 +91,17 @@ button {
 	line-height: 1.5;/*improve readability*/
 }
 
-.hero-image-placeholder {
+.image {
 	background-color: #6c7a89;
 	color: #ddd; 
 	display: flex;
+	/*flex-direction: column;*/
 	justify-content: center;
 	align-items: center;
-	width: 90%; /*responsive width*/
-	max-width: 350px/*limit how big it can get even at 90%*/
-	height: 180px; /*fixed height */
-	text-align: center;
-	padding: 10px;/*internal padding for text*/
+	/*overflow: hidden;*/
+	width: 100%; /*responsive width*/
+	height: auto; 
+	/*display: block;*/
 }
 
 /*----section 3: information-section---*/
@@ -252,7 +252,7 @@ img {
 		font-size: 18px;
 	}
 	
-	.hero-image-placeholder {
+	.image {
 		width: 400px; 
 		height: 220px;
 	}
@@ -334,7 +334,7 @@ img {
 		font-size: 18px;
 	}
 	
-	.hero-image-placeholder {
+  .image {
 		width: 500px;
 		height: 250px;
 	}
